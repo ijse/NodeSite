@@ -1,0 +1,16 @@
+[{
+	"type": "get",
+	"pattern": "/",
+	"controller": "commonController",
+	"method": "index"
+}, {
+	"type": "get",
+	"pattern": "/favicon.icon",
+	"controller": "",
+	"method": ""
+}, {
+	"type": "get",
+	"pattern": "/test",
+	"controller": "commonController",
+	"method": "test"
+}]
