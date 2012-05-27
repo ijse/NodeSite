@@ -4,7 +4,7 @@
  * @date 2012-05-23
  */
 var app = module.exports = express.createServer();
-var middlewares = require("../middleware/index.js");
+var middlewares = require(MIDWARE_DIR);
 // Configuration
 app.configure(function() {
   app.set('views', VIEW_DIR);
@@ -18,12 +18,20 @@ app.configure(function() {
     secret: 'My Secret string for session'
   }));
 
+  app.use(express.logger());
+
   // User-defined middle wares
-  app.use.apply(app, middlewares.before);
+  //app.use.apply(app, middlewares.before);
+  util.each(middlewares.before, function(item, index) {
+    app.use(item);
+  });
 
   app.use(app.router);
 
-  app.use.apply(app, middlewares.after);
+  //app.use.apply(app, middlewares.after);
+  util.each(middlewares.after, function(item, index) {
+    app.use(item);
+  });
 
   app.use(express.static(PUBLIC_DIR));
 });

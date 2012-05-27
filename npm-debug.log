@@ -1,0 +1,58 @@
+info it worked if it ends with ok
+verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+verbose cli   'install',
+verbose cli   'Alice' ]
+info using npm@1.1.0-beta-10
+info using node@v0.6.7
+verbose config file C:\Users\Administrator.SD--20110530KDJ\.npmrc
+verbose config file C:\Program Files\nodejs\etc\npmrc
+verbose config file C:\Program Files\nodejs\node_modules\npm\npmrc
+verbose mkdir done: C:\Users\Administrator.SD--20110530KDJ\AppData\Roaming\npm 755
+verbose mkdir done: F:\Workspace\SiteTagger 755
+verbose caching F:\Workspace\SiteTagger\package.json
+verbose loadDefaults application-name@0.0.1
+verbose caching F:\Workspace\SiteTagger\node_modules\ejs\package.json
+verbose loadDefaults ejs@0.7.1
+verbose caching F:\Workspace\SiteTagger\node_modules\mongoskin\package.json
+verbose loadDefaults mongoskin@0.3.6
+verbose caching F:\Workspace\SiteTagger\node_modules\underscore\package.json
+verbose loadDefaults underscore@1.3.3
+verbose caching F:\Workspace\SiteTagger\node_modules\express\package.json
+verbose loadDefaults express@2.5.8
+verbose caching F:\Workspace\SiteTagger\node_modules\less\package.json
+verbose loadDefaults less@1.3.0
+verbose caching F:\Workspace\SiteTagger\node_modules\log4jse\package.json
+verbose loadDefaults Log4Jse@0.1.0
+verbose from cache F:\Workspace\SiteTagger\package.json
+verbose into F:\Workspace\SiteTagger [ 'Alice' ]
+verbose cache add Alice
+verbose cache add [ 'Alice', null ]
+silly cache add: name, spec, args [ undefined, 'Alice', [ 'Alice', null ] ]
+verbose parsed url { pathname: 'Alice', path: 'Alice', href: 'Alice' }
+verbose addNamed [ 'Alice', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'Alice', '', false ]
+verbose raw, before any munging Alice
+verbose url resolving [ 'https://registry.npmjs.org/', './Alice' ]
+verbose url resolved https://registry.npmjs.org/Alice
+http GET https://registry.npmjs.org/Alice
+http 404 https://registry.npmjs.org/Alice
+silly get cb [ 404,
+silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     date: 'Sat, 26 May 2012 12:06:52 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '52',
+silly get cb     'cache-control': 'must-revalidate' } ]
+ERR! 404 'Alice' is not in the npm registry.
+ERR! 404 You could maybe bug the author to publish it
+ERR! 404 Note that you can also install from a tarball or folder.
+ERR! 
+ERR! System Windows_NT 6.1.7600
+ERR! command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "Alice"
+ERR! cwd F:\Workspace\SiteTagger
+ERR! node -v v0.6.7
+ERR! npm -v 1.1.0-beta-10
+ERR! code E404
+ERR! message 404 Not Found: Alice
+verbose exit [ 1, true ]

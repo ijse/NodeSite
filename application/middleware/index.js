@@ -11,11 +11,10 @@ exports.before = confn([
 exports.after = confn([
 	"page404"
 ]);
-
 function confn(list) {
 	var arr = [];
 	util.each(list, function(item, index) {
 		arr.push(require("./" + item + ".js").index);
 	})
 	return arr;
-}
+} 

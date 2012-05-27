@@ -10,6 +10,5 @@ exports.index = function(req, res, next) {
 	// console.log("STATICS: server_run_time = " + (new Date() - START_TIME));
 
 	//TODO: Static for website log
-	
 	next();
 }
