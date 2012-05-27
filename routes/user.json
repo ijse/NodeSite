@@ -1,4 +1,6 @@
-{
-	"name": "ijse",
-	"age": "21"
-}
+[{
+	"type": "get",
+	"pattern": "/regist",
+	"controller": "userController",
+	"method": "regist"
+}]

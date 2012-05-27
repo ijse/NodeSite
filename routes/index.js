@@ -8,6 +8,7 @@
 //TODO: Auto import json files
 var siteRoutes = [
 	require("./site.json"),
+	require("./user.json"),
 	require("./common.json")
 ];
 

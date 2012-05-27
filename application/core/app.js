@@ -5,17 +5,19 @@
  */
 var app = module.exports = express.createServer();
 var middlewares = require(MIDWARE_DIR);
+
 // Configuration
 app.configure(function() {
   app.set('views', VIEW_DIR);
   app.set('view engine', 'ejs');
+  app.register(".html", require("ejs"));
 
   // Some middle wares
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({
-    secret: 'My Secret string for session'
+    secret: CONFIG.sessionSecret
   }));
 
   app.use(express.logger());
@@ -35,8 +37,6 @@ app.configure(function() {
 
   app.use(express.static(PUBLIC_DIR));
 });
-
-app.register(".html", require("ejs"));
 
 app.configure('development', function() {
   app.use(express.errorHandler({
