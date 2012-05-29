@@ -5,7 +5,6 @@
  * @return {[type]}     [description]
  */
 
-//var userModel = require("../model/userModel.js");
 var thiz = {
 	index: function(req, res) {
 		res.render('index', {
@@ -13,14 +12,31 @@ var thiz = {
 		});
 	},
 	test: function(req, res, next) {
-		//for test
-		var t = model.getModel("SiteModel", {
-			name: "ijse",
-			age: 13
-		});
-		debugger;
-		t.insert();
-		res.send("Fine!!");
+		switch(req.param("testcase")) {
+			case "layout1-1":
+				res.render("regist", {
+					layout: "layout_1-1"
+				})
+				break;
+			default: 
+				//for test
+				var t = model.getModel("SiteModel", {
+					name: "ijse",
+					age: 13
+				});
+				//t.insert();
+				//res.send("Fine!!");
+				res.local("message", {
+					title: "出错啦！！",
+					content: "我出个错给您看看。。",
+					timeout: 10,
+					url: "/index"
+				});
+				res.local("title", "出错页");
+				next();
+				break;
+		}
+		
 	}
 }
 util.extend(exports, thiz);

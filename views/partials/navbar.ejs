@@ -1,0 +1,40 @@
+<%
+	var menuList1 = [ {
+			text: "首页",
+			href: BASE_URL,
+			title: "首页"
+		}
+	];
+%>
+
+		<div class="navbar navbar-fixed-top my-topNav">
+		  <div class="navbar-inner">
+		    <div class="container">
+		      <a class="brand" href="<%=BASE_URL%>">NAD LIFE</a>
+
+		      	<ul class="nav">
+					<li class="active">
+						<a href="<%=BASE_URL%>" title="首页">首页</a>
+					</li>
+					<li><a href="#">晚餐吐槽</a></li>
+					<li><a href="#">学习分享</a></li>
+				</ul>
+
+				<form class="nav pull-right form-inline my-loginBox" method="post" action="<%=BASE_URL%>login">
+				  	<input type="text" name="user[name]" placeholder="UserName" class="input-small" />
+				  	<input type="password" name="user[pass]" placeholder="PassWord"  class="input-small" />
+				  	<div class="btn-group my-loginBtns">
+						<button class="btn btn-primary"><i class="icon-user icon-white"> </i>  登陆 </button>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="<%=BASE_URL%>regist"><i class="icon-plus"></i> 注册用户</a></li>
+						</ul>
+					</div>
+				  	<a href="#" class="my-forgetPass" title="通过邮箱找回密码">忘记密码</a>
+				</form>
+
+		    </div>
+		  </div>
+		</div>

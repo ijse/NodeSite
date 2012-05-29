@@ -7,6 +7,57 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 1057,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/user.json",
+			"settings":
+			{
+				"buffer_size": 129,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/**\n * Auth middlewares\n * @author ijse\n */\n\n exports.index = function(req, res, next) {\n 	var path = req.path;\n 	var method = req.method;\n 	debugger;\n\n\n\n 	next();\n }\n\n function checkAuthority(req, res) {\n 	//Do check authority\n\n 	return false;\n }",
+			"file": "application/middleware/auth.js",
+			"file_size": 262,
+			"file_write_time": 129826714448051392,
+			"settings":
+			{
+				"buffer_size": 247,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controller/commonController.js",
+			"settings":
+			{
+				"buffer_size": 483,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/middleware/page404.js",
+			"settings":
+			{
+				"buffer_size": 279,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/middleware/index.js",
+			"settings":
+			{
+				"buffer_size": 334,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Nodejs/Nodejs.sublime-build",
 	"command_palette":
@@ -192,14 +243,41 @@
 	},
 	"file_history":
 	[
-		"/F/Workspace/SiteTagger/application/middleware/index.js",
-		"/F/Workspace/SiteTagger/server.js",
+		"/F/Workspace/SiteTagger/application/middleware/setGlobalVar.js",
+		"/F/Workspace/SiteTagger/routes/common.json",
+		"/F/Workspace/SiteTagger/routes/site.json",
+		"/F/Workspace/SiteTagger/public/css/main.less",
+		"/F/Workspace/SiteTagger/views/partials/pageHeader.ejs",
+		"/F/Workspace/SiteTagger/views/partials/navbar.ejs",
+		"/F/Workspace/SiteTagger/public/less/bootstrap.less",
+		"/F/Workspace/SiteTagger/views/pageHeader.ejs",
 		"/F/Workspace/SiteTagger/application/core/app.js",
+		"/F/Workspace/SiteTagger/views/layout.ejs",
+		"/F/Workspace/SiteTagger/views/partials/footer.ejs",
+		"/F/Workspace/SiteTagger/views/footer.ejs",
+		"/F/Workspace/SiteTagger/views/pageFooter.ejs",
+		"/F/Workspace/SiteTagger/public/less/diy/my.less",
+		"/F/Workspace/SiteTagger/views/pageNavbar.ejs",
+		"/F/Workspace/SiteTagger/public/less/navbar.less",
+		"/F/Workspace/SiteTagger/public/less/diy/user.less",
+		"/F/Workspace/SiteTagger/public/css/base.less",
+		"/F/Workspace/SiteTagger/public/css/base.css",
+		"/F/Workspace/SiteTagger/application/controller/userController.js",
+		"/F/Workspace/SiteTagger/application/middleware/index.js",
+		"/F/Workspace/SiteTagger/views/index.ejs",
+		"/F/Workspace/SiteTagger/application/controller/commonController.js",
+		"/D/My Documents/Desktop/twitter-bootstrap-b261f97/less/navbar.less",
 		"/F/Workspace/SiteTagger/application/middleware/setRootPath.js",
+		"/F/Workspace/SiteTagger/conf/index.js",
+		"/F/Workspace/SiteTagger/views/regist.ejs",
+		"/D/My Documents/Desktop/twitter-bootstrap-b261f97/docs/assets/js/bootstrap-modal.js",
+		"/F/Workspace/SiteTagger/public/lib/bootstrap/css/bootstrap.css",
+		"/F/Workspace/SiteTagger/public/lib/bootstrap/css/bootstrap-responsive.css",
+		"/F/Workspace/SiteTagger/application/controller/siteController",
+		"/F/Workspace/SiteTagger/server.js",
 		"/F/Workspace/SiteTagger/application/middleware/statistics.js",
 		"/F/Workspace/SiteTagger/node_modules/express/node_modules/connect/lib/middleware/vhost.js",
 		"/F/Workspace/SiteTagger/node_modules/express/node_modules/connect/lib/public/directory.html",
-		"/F/Workspace/SiteTagger/conf/index.js",
 		"/F/Workspace/SiteTagger/application/common/index.js",
 		"/F/Workspace/SiteTagger/conf/app.json",
 		"/F/Workspace/SiteTagger/application/common/ObjectId.js",
@@ -212,11 +290,8 @@
 		"/F/Workspace/SiteTagger/views/siteAdd.ejs",
 		"/F/Workspace/SiteTagger/routes/index.js",
 		"/F/Workspace/SiteTagger/application/middleware/page404.js",
-		"/F/Workspace/SiteTagger/routes/common.json",
-		"/F/Workspace/SiteTagger/application/controller/commonController.js",
 		"/F/Workspace/SiteTagger/application/model/index.js",
 		"/F/Workspace/SiteTagger/application/model/UserModel.js",
-		"/F/Workspace/SiteTagger/routes/site.json",
 		"/C/Users/Administrator.SD--20110530KDJ/AppData/Roaming/Sublime Text 2/Packages/BracketHighlighter/Default (Windows).sublime-keymap",
 		"/C/Users/Administrator.SD--20110530KDJ/AppData/Roaming/Sublime Text 2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
 		"/F/Workspace/SiteTagger/application/common/jsextend.js",
@@ -225,7 +300,6 @@
 		"/F/Workspace/SiteTagger/views/404.ejs",
 		"/F/Workspace/SiteTagger/public/test.htm",
 		"/F/Workspace/SiteTagger/public/test.html",
-		"/F/Workspace/SiteTagger/views/layout.ejs",
 		"/F/Workspace/SiteTagger/routes.js",
 		"/F/Workspace/SiteTagger/node_modules/log4jse/index.js",
 		"/F/Workspace/SiteTagger/routes/site.js",
@@ -234,7 +308,6 @@
 		"/C/Users/Administrator.SD--20110530KDJ/AppData/Roaming/Sublime Text 2/Packages/DocBlockr/Base File.sublime-settings",
 		"/C/Users/Administrator.SD--20110530KDJ/AppData/Roaming/Sublime Text 2/Packages/sublime-V8/JSHINT.sublime-settings",
 		"/F/Workspace/Log4Jse/Log4Jse.js",
-		"/F/Workspace/SiteTagger/views/index.ejs",
 		"/F/Workspace/SiteTagger/views/siteAdd.html",
 		"/F/Workspace/SiteTagger/views/404.html",
 		"/F/Workspace/SiteTagger/app.js",
@@ -284,6 +357,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"thiz",
 			"model",
 			"Model",
 			"model",
@@ -321,8 +395,168 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 1057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/user.json",
+					"settings":
+					{
+						"buffer_size": 129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/middleware/auth.js",
+					"settings":
+					{
+						"buffer_size": 247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/controller/commonController.js",
+					"settings":
+					{
+						"buffer_size": 483,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 81.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/middleware/page404.js",
+					"settings":
+					{
+						"buffer_size": 279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/middleware/index.js",
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -357,6 +591,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 154.0
+	},
 	"output.jsconsole_view":
 	{
 		"height": 0.0
@@ -375,6 +613,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"bootstrap",
+				"SiteTagger/public/less/bootstrap.less"
+			],
+			[
+				"main.less",
+				"SiteTagger/public/css/main.less"
+			],
+			[
+				"layout",
+				"SiteTagger/views/layout.ejs"
+			],
 			[
 				"site",
 				"views/siteAdd.ejs"
@@ -406,6 +656,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 333.0,
+	"side_bar_width": 290.0,
 	"status_bar_visible": true
 }

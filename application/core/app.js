@@ -10,7 +10,7 @@ var middlewares = require(MIDWARE_DIR);
 app.configure(function() {
   app.set('views', VIEW_DIR);
   app.set('view engine', 'ejs');
-  app.register(".html", require("ejs"));
+  app.register(".htm", require("ejs"));
 
   // Some middle wares
   app.use(express.bodyParser());
@@ -20,7 +20,7 @@ app.configure(function() {
     secret: CONFIG.sessionSecret
   }));
 
-  app.use(express.logger());
+  //app.use(express.logger());
 
   // User-defined middle wares
   //app.use.apply(app, middlewares.before);

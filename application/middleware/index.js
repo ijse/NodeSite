@@ -4,11 +4,13 @@
 // Runs before routes
 exports.before = confn([
 	"statistics",
-	"setRootPath"
+	"auth",
+	"setGlobalVar"
 ])
 
 // Runs after routes
 exports.after = confn([
+	"msg",
 	"page404"
 ]);
 function confn(list) {

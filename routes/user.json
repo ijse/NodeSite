@@ -1,6 +1,19 @@
 [{
 	"type": "get",
 	"pattern": "/regist",
-	"controller": "userController",
-	"method": "regist"
+	"handler": [
+		{
+			"controller": "userController",
+			"method": "regist"			
+		}
+	]
+}, {
+	"type": "post",
+	"pattern": "/regist",
+	"handler": [
+		{
+			"controller": "userController",
+			"method": "doRegist"			
+		}
+	]
 }]

@@ -18,7 +18,7 @@ var thiz = {
 		}, function(err, allSites) {
 			res.local("allSites", allSites);
 			res.render("siteAdd", {
-				layout:false
+				//layout:false
 			});
 		});
 	},
@@ -39,6 +39,7 @@ var thiz = {
 		})
 	},
 	del: function(req, res) {
+		console.log("Site delete controller!!")
 		debugger;
 		var site = model.getModel("SiteModel", {_id: req.param("_id")});
 		site.remove(function(err, doc) {

@@ -1,16 +1,26 @@
 [{
 	"type": "get",
 	"pattern": "/site",
-	"controller": "siteController",
-	"method": "addView"
+	"handler": [
+		{
+			"controller": "siteController",
+			"method": "addView"	
+		}
+	]
 }, {
 	"type": "post",
 	"pattern": "/site/add",
-	"controller": "siteController",
-	"method": "add"
+	"handler": [{
+			"controller": "siteController",
+			"method": "add"
+	}]
 }, {
 	"type": "all",
 	"pattern": "/site/del/:_id",
-	"controller": "siteController",
-	"method": "del"
-	}]
+	"handler": [
+		{
+			"controller": "siteController",
+			"method": "del"		
+		}
+	]
+}]
