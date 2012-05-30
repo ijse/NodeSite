@@ -9,6 +9,7 @@
 var siteRoutes = [
 	require("./site.json"),
 	require("./user.json"),
+	require("./dinner.json"),
 	require("./common.json")
 ];
 

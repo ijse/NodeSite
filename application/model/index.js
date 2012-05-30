@@ -10,5 +10,3 @@ exports.getModel = function(name, initData) {
 	ModelClass = util.extendfn(ModelClass, BaseModel);
 	return new ModelClass(initData);
 }
-
-

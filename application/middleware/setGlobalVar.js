@@ -2,8 +2,12 @@
  * Set root path
  */
 exports.index = function(req, res, next) {
-	res.local("BASE_URL", CONFIG.baseUrl);
-	res.local("SITE_NAME", CONFIG.siteName);
+
+	res.locals({
+		"BASE_URL": CONFIG.baseUrl,
+		"SITE_NAME": CONFIG.siteName,
+		"session": req.session
+	})
 	next();
 }
  

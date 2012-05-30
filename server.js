@@ -29,7 +29,7 @@ global.url 		= require("url");
 global.sysutil 	= require("util");
 global.mongo 	= require('mongoskin');
 
-global.util 	= require(COMMON_DIR).index;
+global.util 	= require(COMMON_DIR);
 global.model 	= require(MODEL_DIR);
 
 // Load configurations

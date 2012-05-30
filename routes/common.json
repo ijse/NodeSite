@@ -1,6 +1,6 @@
 [{
 	"type": "get",
-	"pattern":"\/(index)?$",
+	"pattern":"^\/(index)?$",
 	"regexp": true,
 	"handler": [
 		{

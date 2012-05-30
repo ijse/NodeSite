@@ -1,4 +1,22 @@
 [{
+	"type": "post",
+	"pattern": "/login",
+	"handler": [
+		{
+			"controller": "userController",
+			"method": "login"
+		}
+	]
+},{
+	"type": "get",
+	"pattern": "/logout",
+	"handler": [
+		{
+			"controller": "userController",
+			"method": "logout"			
+		}
+	]
+}, {
 	"type": "get",
 	"pattern": "/regist",
 	"handler": [

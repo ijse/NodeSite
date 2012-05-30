@@ -5,7 +5,8 @@
  */
 
 var BaseModel = exports.class = function(initData, collectionName) {
-	this.data = initData || {};
+	//this.data = initData || {};
+	this.setData(initData);
 	this.collection = DB.collection(collectionName); 
 }
 
@@ -13,7 +14,7 @@ BaseModel.prototype.setData = function(data) {
 	// util.each(util.keys(data), function(item, index) {
 	// 	this[item] = data[item];
 	// }
-	this.data = data;
+	this.data = data || {};
 }
 
 BaseModel.prototype.getData = function(key) {
@@ -75,9 +76,12 @@ BaseModel.prototype.remove = function(options, callback) {
 BaseModel.prototype.find = function() {
 	return this.collection.find.apply(this.collection, arguments);
 }
+BaseModel.prototype.findOne = function() {
+	return this.collection.findOne.apply(this.collection, arguments);
+}
 
 BaseModel.prototype.list = function(query, options, callback) {
-	this.find(query, options).toArray(function(err, doc) {
+	this.collection.find(query, options).toArray(function(err, doc) {
 		callback.call(null, err, doc);
 	});
 	return null;

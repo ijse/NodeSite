@@ -2,9 +2,49 @@
  * User Controller
  */
 
-userController = {
+var userController = {
 	"login": function(req, res, next) {
-		var loginInfo = req.body;
+		var msg = {};
+		var loginInfo = req.body.user;
+		var userModel = model.getModel("UserModel");
+		userModel.login(loginInfo, function(data) {
+			if(data == null || data.length === 0) {
+				msg = {
+					title: "登陆失败",
+					content: "用户名不存在！"
+				};
+			} else if(data.pass !== loginInfo.pass) {
+				msg = {
+					title: "登陆失败",
+					content: "用户密码不正确！"
+				}
+			} else {
+				data.pass = null;
+				// Write session
+				req.session.auth = true;
+				req.session.userInfo = data;
+
+				// Login Success
+				msg = {
+					title: "登陆成功!",
+					content: "将为您跳转至上一页",
+					url: req.headers.referer
+				}
+			}
+			res.render("msg", {
+				message: msg,
+				title: msg.title
+			});
+		});
+	},
+	logout: function(req, res, next) {
+		req.session.destroy();
+		res.render("msg", {
+			"message":{
+				title: "退出成功！",
+				content: "您已经成功退出系统，正在返回上一页"
+			}
+		});
 	},
 	/**
 	 * 打开注册页面
@@ -25,12 +65,13 @@ userController = {
 			url: "regist"
 		};
 		// Validate
-		if(registInfo.name == "") {
+		if(registInfo.name == "" || registInfo.pass == "") {
 			msg = {
-
+				content: "用户名或密码不能为空！"
 			}
+			next();
+			return ;
 		}
-
 		
 		var userModel = model.getModel("UserModel", registInfo);
 		userModel.insert(function(err, data) {

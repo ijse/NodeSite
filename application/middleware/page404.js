@@ -15,7 +15,7 @@ exports.index = function(req, res, next) {
 			message: {
 				title: "404该页没找到！",
 				content: "您访问的页面<em>" + req.url + "</em>没有找到!",
-				url: "index"
+				url: req.headers.referer
 			}
 		})
 	} else {
