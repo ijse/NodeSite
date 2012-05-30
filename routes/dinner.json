@@ -1,0 +1,20 @@
+[{
+	"type": "get",
+	"pattern":"/dinner",
+	"handler": [
+		{
+			"controller": "dinnerController",
+			"method": "index"
+		}
+	]
+}, {
+	"type": "get",
+	"pattern": "/dinner/comment",
+	"handler": [
+		{
+			"controller": "dinnerController",
+			"method": "comment"
+		}
+	]
+
+}]
