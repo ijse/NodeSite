@@ -1,9 +1,22 @@
 
-<form class="form-vertical">
-	<div class="control-group">
-		<div class="controls">
-			<textarea name="commentContent"></textarea>
-			<p class="help-block">Supporting help text</p>
-		</div>
-    </div>
+
+<form class="row-fluid my-replyForm">
+	<div class="span10">
+		<textarea name="commentContent" class="span12 my-comment"></textarea>
+	</div>
+	<div class="span2">
+		<input type="button" class="span12 btn my-submit" value="发布" />
+	</div>
 </form>
+
+<div class="row-fluid my-commentList">
+	<div class="my-commentItem">
+		Here is dinner comment content;
+	</div>
+	<% util.each(commentList, function(cmt) { %>
+		<div class="my-commentItem">
+			<h4><%=cmt.fromUser.name %> @ <%=cmt.postTime %></h4>
+			<%=cmt.content %>
+		</div>
+	<% }) %>
+</div>
